@@ -12,6 +12,21 @@
   </header>
 
   <main>
+    <section class="panel form-panel">
+      <div class="panel-header">
+        <h2>insert row</h2>
+      </div>
+      <form id="create-form">
+        <input name="name" placeholder="name" required />
+        <input name="sport" placeholder="sport" required />
+        <input name="category" placeholder="category" required />
+        <input name="quantity" type="number" placeholder="quantity" min="0" value="0" required />
+        <input name="price" type="number" step="0.01" placeholder="price" min="0" required />
+        <input name="supplier" placeholder="supplier" />
+        <button type="submit">insert</button>
+      </form>
+    </section>
+
     <section class="panel">
       <div class="panel-header">
         <h2>products</h2>
@@ -28,7 +43,6 @@
               <th>quantity</th>
               <th>price</th>
               <th>supplier</th>
-              <th>last_restocked</th>
               <th></th>
             </tr>
           </thead>

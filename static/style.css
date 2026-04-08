@@ -108,6 +108,48 @@ td.null {
   font-style: italic;
 }
 
+.actions {
+  display: flex;
+  gap: 4px;
+}
+
+.row-input {
+  font-family: Menlo, Consolas, monospace;
+  font-size: 12px;
+  padding: 2px 6px;
+  border: 1px solid #d0d7de;
+  border-radius: 3px;
+  width: 100%;
+  background: #fff;
+}
+
+.row-input:focus {
+  outline: none;
+  border-color: #4a90e2;
+  box-shadow: 0 0 0 2px rgba(74,144,226,0.2);
+}
+
+tr.editing {
+  background: #fffbe6 !important;
+}
+
+.edit-btn {
+  font-family: Menlo, Consolas, monospace;
+  font-size: 11px;
+  padding: 2px 8px;
+  background: #fff;
+  color: #1f6feb;
+  border: 1px solid #d0d7de;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.edit-btn:hover {
+  background: #1f6feb;
+  color: #fff;
+  border-color: #1f6feb;
+}
+
 .delete-btn {
   font-family: Menlo, Consolas, monospace;
   font-size: 11px;
@@ -117,6 +159,48 @@ td.null {
   border: 1px solid #d0d7de;
   border-radius: 3px;
   cursor: pointer;
+}
+
+.form-panel {
+  margin-bottom: 16px;
+}
+
+#create-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 10px 12px;
+}
+
+#create-form input {
+  font-family: Menlo, Consolas, monospace;
+  font-size: 12px;
+  padding: 4px 8px;
+  border: 1px solid #d0d7de;
+  border-radius: 3px;
+  background: #fff;
+  color: #24292e;
+}
+
+#create-form input:focus {
+  outline: none;
+  border-color: #4a90e2;
+  box-shadow: 0 0 0 2px rgba(74,144,226,0.2);
+}
+
+#create-form button {
+  font-family: Menlo, Consolas, monospace;
+  font-size: 12px;
+  padding: 4px 14px;
+  background: #2c3e50;
+  color: #fff;
+  border: 1px solid #1b2733;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+#create-form button:hover {
+  background: #34495e;
 }
 
 .delete-btn:hover {

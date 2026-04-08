@@ -1,4 +1,3 @@
-from datetime import date
 from typing import Optional
 
 from sqlmodel import Field, SQLModel, create_engine
@@ -14,7 +13,6 @@ class Product(SQLModel, table=True):
     quantity: int = 0
     price: float
     supplier: Optional[str] = None
-    last_restocked: Optional[date] = None
 
 
 sqlite_url = "sqlite:///warehouse.db"

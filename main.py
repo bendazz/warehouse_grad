@@ -23,7 +23,30 @@ def delete_item(id: int):
         return {"ok": True, "id": id}
 
 @app.post("/inventory")
-def create_item()
+def create_item(item: Product):
+    with Session(engine) as session:
+        session.add(item)
+        session.commit()
+        session.refresh(item)
+        return item
+
+
+@app.put("/inventory/{id}")
+def modify_item(id: int, item: Product):
+    with Session(engine) as session:
+        product = session.get(Product, id)
+        if product is None:
+            raise HTTPException(status_code=404, detail="Item not found")
+        product.name = item.name
+        product.sport = item.sport
+        product.category = item.category
+        product.quantity = item.quantity
+        product.price = item.price
+        product.supplier = item.supplier
+        session.add(product)
+        session.commit()
+        session.refresh(product)
+        return product
 
 
 app.mount("/", StaticFiles(directory="static", html=True), name="static")
